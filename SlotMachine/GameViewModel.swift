@@ -22,7 +22,7 @@ class GameViewModel {
         
         let gameInProgress = CurrentValueSubject<Bool, Never>(false)
         
-        let smth = buttonPressed
+        let gameState = buttonPressed
             .map { value -> Bool in
                 gameInProgress.value.toggle()
                 return gameInProgress.value
@@ -37,7 +37,7 @@ class GameViewModel {
                         slotValues[Int.random(in: (0...5))],
                         slotValues[Int.random(in: (0...5))]]
             }
-            .combineLatest(smth)
+            .combineLatest(gameState)
             .filter { $0.1 }
             .map { value -> ([String], Bool) in
                 let isEqualSlots = value.0[0] == value.0[1] && value.0[1] == value.0[2]
@@ -47,7 +47,7 @@ class GameViewModel {
             .setFailureType(to: Never.self)
             .share()
         
-        self.labels = smth
+        self.labels = gameState
             .combineLatest(slot.map { $0.1 } )
             .map {
                 switch $0.0 {
