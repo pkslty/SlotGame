@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlotMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start to start game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1N-wf-5wF">
+                                <rect key="frame" x="112.5" y="215" width="189.5" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="oVw-B3-Ah5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brO-PR-J3Z">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l66-xg-tdw">
+                                <rect key="frame" x="132" y="606" width="150" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Uq4-Fk-Ou2"/>
+                                    <constraint firstAttribute="height" constant="75" id="r59-Mq-kak"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l66-xg-tdw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A2b-wa-2B9"/>
+                            <constraint firstItem="brO-PR-J3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IGa-fA-huE"/>
+                            <constraint firstItem="brO-PR-J3Z" firstAttribute="top" secondItem="i1N-wf-5wF" secondAttribute="bottom" constant="50" id="WDw-Ls-nqu"/>
+                            <constraint firstItem="i1N-wf-5wF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3G-sP-fwd"/>
+                            <constraint firstItem="l66-xg-tdw" firstAttribute="top" secondItem="brO-PR-J3Z" secondAttribute="bottom" constant="50" id="kYP-xn-DGm"/>
+                            <constraint firstItem="brO-PR-J3Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tNA-RE-Gbq"/>
+                            <constraint firstItem="i1N-wf-5wF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7i-2Z-mua"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="i1N-wf-5wF" id="ZUJ-eg-10z"/>
+                        <outlet property="pickerView" destination="brO-PR-J3Z" id="Hed-we-ucq"/>
+                        <outlet property="playButton" destination="l66-xg-tdw" id="E88-Jb-5Mx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
